@@ -1,4 +1,4 @@
-/*	
+/*
 	AUTHOR: Lystic
 	DATE: 06/19/14
 	VERSION: 1.5
@@ -9,7 +9,7 @@
 
 /* Configuration */
 
-Admin_List = compileFinal "['76561198027253339','76561197998528511']";		//replace these with your admin player UIDS (steamID64)
+Admin_List = compileFinal "['76561198027253339','76561197998528511','76561198169221642']";		//replace these with your admin player UIDS (steamID64)
 
 /* End Configuration */
 
@@ -47,7 +47,7 @@ if(isNil "AH_fnc_MP") then {
 				waitUntil{isNull (findDisplay 49)}
 			};
 		};
-	};	
+	};
 };
 if(isServer) then {
 	AH_Menu_DoSpawn = {
@@ -486,7 +486,7 @@ if(!isDedicated) then {
 				waitUntil{AH_DoneWhileLoop};
 				{
 					deleteMarkerLocal str _x;
-				} forEach AH_PrevMarkers;	
+				} forEach AH_PrevMarkers;
 			};
 		};
 		AH_VehMarkers = {
@@ -513,7 +513,7 @@ if(!isDedicated) then {
 									_VehMark setMarkerColorLocal ("ColorBlue");
 								};
 							};
-						};	 
+						};
 					} forEach vehicles;
 					sleep 1;
 				};
@@ -593,7 +593,7 @@ if(!isDedicated) then {
 		AH_TP = {
 			if(player call AH_AdminCheck) then {
 				if !("ItemMap" in items player) then {
-					player addItem "ItemMap";	
+					player addItem "ItemMap";
 				};
 				openMap[true,false];
 				onMapSingleClick '[[player,_pos],"AH_Menu_DoTP",false,fale] call AH_fnc_MP;openMap[false,false];onMapSingleClick "";false';
@@ -615,5 +615,3 @@ if(!isDedicated) then {
 		hint parseText format["Press '%1' to open the admin menu!<br/>Press '%2' to open the spawn menu!<br/>Press F1 F2 and F3 to delete and repair vehicles or open the log menu respectively",(actionKeysNames ["moveRight",1]),(actionKeysNames ["moveLeft",1])];
 	};
 };
-
-

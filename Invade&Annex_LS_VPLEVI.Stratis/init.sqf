@@ -1,13 +1,13 @@
 /*
 @filename: init.sqf
 Author:
-	
+
 	Quiksilver
 
 Last modified:
 
 	12/05/2014
-	
+
 Description:
 
 	Things that may run on both server and client.
@@ -16,6 +16,8 @@ ______________________________________________________*/
 
 [] execVM "Anticheat.sqf";
 [] execVM "AdminMenu.sqf";
+[] execVM "memberonlyspawner.sqf";//Gracey
+
 ["Initialize"] call BIS_fnc_dynamicGroups;
 
 for [ {_i = 0}, {_i < count(paramsArray)}, {_i = _i + 1} ] do {
@@ -44,7 +46,7 @@ enableSaving [false, false];
 
 //=================HELIPAD=====================
 [] execVM "scripts\helipadInit.sqf";
-sleep 0.1; 
+sleep 0.1;
 serialno = 133676;
 heliPadOn = 0;
 #include "scripts\helipadCamera.sqf"

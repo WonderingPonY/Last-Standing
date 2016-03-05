@@ -1,13 +1,13 @@
 /*
 @filename: onPlayerRespawn.sqf
 Author:
-	
+
 	Quiksilver
 
 Last modified:
 
 	29/10/2014 ArmA 1.32 by Quiksilver
-	
+
 Description:
 
 	Client scripts that should execute after respawn.
@@ -18,8 +18,8 @@ private ["_iampilot"];
 //=========================== Fatigue setting
 
 if (PARAMS_Fatigue == 0) then {player enableFatigue FALSE;};
-player setCustomAimCoef 2.5;
-player setUnitRecoilCoefficient 1;
+player setCustomAimCoef .5;//CGracey[Changed to .5 from 2.5]
+player setUnitRecoilCoefficient .6;//Gracey[Changed to .6 from 1]
 player forceWalk false;
 //=========================== PILOTS ONLY
 
