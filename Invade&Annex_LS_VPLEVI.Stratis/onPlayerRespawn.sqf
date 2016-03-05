@@ -18,7 +18,7 @@ private ["_iampilot"];
 //=========================== Fatigue setting
 
 if (PARAMS_Fatigue == 0) then {player enableFatigue FALSE;};
-player setCustomAimCoef .5;//CGracey[Changed to .5 from 2.5]
+player setCustomAimCoef .5;//Gracey[Changed to .5 from 2.5]
 player setUnitRecoilCoefficient .6;//Gracey[Changed to .6 from 1]
 player forceWalk false;
 //=========================== PILOTS ONLY

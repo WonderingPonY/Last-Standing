@@ -14,6 +14,7 @@ Description:
 	Deprecated initialization file, still using until the below is correctly partitioned between server and client.
 ______________________________________________________*/
 
+[] execVM "scripts\helipadInit.sqf";
 [] execVM "Anticheat.sqf";
 [] execVM "AdminMenu.sqf";
 [] execVM "memberonlyspawner.sqf";//Gracey
@@ -45,7 +46,6 @@ enableSaving [false, false];
 //null = [5, "scripts"] execVM "scripts\helipad_lights\helipad_light_auto.sqf";
 
 //=================HELIPAD=====================
-[] execVM "scripts\helipadInit.sqf";
 sleep 0.1;
 serialno = 133676;
 heliPadOn = 0;

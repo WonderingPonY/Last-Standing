@@ -112,7 +112,7 @@ class CfgSounds
 		sound[] = {\sfx\DING.ogg, 1, 1.0};
 		titles[] = {};
 	};
-
+	
 };
 
 class CfgFunctions
